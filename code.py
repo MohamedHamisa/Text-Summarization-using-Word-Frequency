@@ -55,7 +55,9 @@ sentence_scores
 
 #Text Summarization
 # get top 5 sentences
-import heapq
+import heapq  
+# Heap queue is a special tree structure in which each parent node is less than or equal to its child node. In python it is implemented using the heapq module
+# It is very useful is implementing priority queues where the queue item with higher weight is given more priority in processing
 summary = heapq.nlargest(5, sentence_scores, key=sentence_scores.get)
 
 print(" ".join(summary))
